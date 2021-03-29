@@ -262,6 +262,17 @@
     </tr>
   </table>
 
+<script>
+function detail_switch(click_id) {
+    click_intro = click_id + '_content'
+    var x = document.getElementById(click_intro);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
 
   </body>
 </html>
