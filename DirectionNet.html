@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Wide-Baseline Relative Camera Pose Estimation with Directional Learning</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href=""> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="./files/bootstrap.min.css">
+    <link rel="stylesheet" href="./files/font-awesome.min.css">
+    <link rel="stylesheet" href="./files/codemirror.min.css">
+    <link rel="stylesheet" href="./files/app.css">
+
+    <link rel="stylesheet" href="./files/bootstrap.min(1).css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0ZMW34H4P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-E0ZMW34H4P');
+    </script>
+    
+    <script src="./files/jquery.min.js"></script>
+    <script src="./files/bootstrap.min.js"></script>
+    <script src="./files/codemirror.min.js"></script>
+    <script src="./files/clipboard.min.js"></script>
+
+    <script src="./files/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Wide-Baseline Relative Camera Pose Estimation with Directional Learning<br>
+                <small>
+                    CVPR 2021
+                </small>
+            </h1>
+        </div>
+<!--         <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://kai-46.github.io/website/">
+                          Kai Zhang<sup>*</sup>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cs.cornell.edu/~fujun/">
+                          Fujun Luan<sup>*</sup>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cs.cornell.edu/~qqw/">
+                          Qianqian Wang
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cs.cornell.edu/~kb/">
+                          Kavita Bala
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cs.cornell.edu/~snavely/">
+                          Noah Snavely
+                        </a>
+                    </li>
+                </ul>
+                Cornell University <br>
+                <!-- <br> -->
+                (<sup>*</sup>Equal contribution)
+            </div>
+        </div>
+
+
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/pdf/2104.00674.pdf">
+                            <img src="./files/paper.png" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://kai-46.github.io/PhySG-website/">
+                            <img src="./files/youtube_icon_dark.png" height="120px"><br>
+                                <h4><strong>Technical Video [Coming Soon]</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://kai-46.github.io/PhySG-website/">
+                            <img src="./files/github_pad.png" height="120px"><br>
+                                <h4><strong>Code [Coming Soon]</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Example Real Results: View Synthesis, Relighting and Material editing
+                </h3>
+                <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                  <source src="files/real-world_results.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <img src="./files/physg_pipeline.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+We present PhySG, an end-to-end inverse rendering pipeline that includes a fully differentiable renderer and can reconstruct geometry, materials, and illumination from scratch from a set of RGB input images. Our framework represents specular BRDFs and environmental illumination using mixtures of spherical Gaussians, and represents geometry as a signed distance function parameterized as a Multi-Layer Perceptron. The use of spherical Gaussians allows us to efficiently solve for approximate light transport, and our method works on scenes with challenging non-Lambertian reflectance captured under natural, static illumination. We demonstrate, with both synthetic and real data, that our reconstructions not only enable rendering of novel viewpoints, but also physics-based appearance editing of materials and illumination.
+                </p>
+            </div>
+        </div>
+
+
+<!--         <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Technical Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="./files/...html" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly="" style="display: none;">
+
+                    </textarea>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                <p></p>
+            </div>
+        </div> -->
+    <!-- </div> -->
+
+
+</body></html>
